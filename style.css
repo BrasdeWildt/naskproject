@@ -104,16 +104,26 @@ body {
 }
 
 .two-photos {
-  display: flex;              /* zet ze naast elkaar */
-  gap: 1rem;                  /* ruimte tussen de foto's */
-  justify-content: center;    /* centreert de hele rij */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* altijd 2 kolommen */
+  gap: 1rem;
   margin-top: 2rem;
+  align-items: center;
+  justify-items: center;
 }
 
 .two-photos img {
   width: 100%;
-  max-width: 500px;           /* maximale breedte per foto */
+  max-width: 500px; /* houdt ze netjes */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+/* Op mobiel onder elkaar */
+@media (max-width: 768px) {
+  .two-photos {
+    grid-template-columns: 1fr; /* dan vallen ze onder elkaar */
+  }
+}
+
