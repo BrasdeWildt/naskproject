@@ -1,0 +1,119 @@
+*{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.slide {
+  min-height: 100vh; /* elke slide vult het hele scherm */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+  padding: 2rem;
+}
+
+.slide__content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.slide__image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.slide__image2 {
+  width: 40%;
+  height: auto;
+  border-radius: 12px;
+  transform: rotate(270deg);
+  margin-bottom: -1.5rem;
+}
+
+.slide__text h1 {
+  margin: 0 0 1rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: #111827;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #2563eb;
+}
+
+.gallery {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* horizontaal centreren */
+  justify-content: center; /* verticaal centreren */
+  text-align: center;
+  background: #f9fafb;
+  padding: 2rem;
+}
+
+.gallery__title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #111827;
+}
+
+.gallery__column {
+  display: flex;
+  flex-direction: column; /* foto’s onder elkaar */
+  gap: 1rem;
+  align-items: center;    /* foto’s in het midden */
+}
+
+.gallery__column img {
+  max-width: 500px;       /* breedte beperken zodat ze mooi centreren */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.photo-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 naast elkaar */
+  justify-items: center;                 /* centreert elke foto in zijn kolom */
+  margin-top: 2rem;
+}
+
+.photo-grid img {
+  width: 100%;
+  max-width: 300px;   /* zodat ze niet te breed worden */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.two-photos {
+  display: flex;              /* zet ze naast elkaar */
+  gap: 1rem;                  /* ruimte tussen de foto's */
+  justify-content: center;    /* centreert de hele rij */
+  margin-top: 2rem;
+}
+
+.two-photos img {
+  width: 100%;
+  max-width: 500px;           /* maximale breedte per foto */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
